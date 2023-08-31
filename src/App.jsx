@@ -39,7 +39,7 @@ function App() {
     [filters],
   );
   return (
-    <div className="w-full min-h-screen bg-light-grayish-cyan-bg">
+    <div className="min-h-screen w-full bg-light-grayish-cyan-bg">
       <Filters
         filters={filters}
         setFilters={setFilters}

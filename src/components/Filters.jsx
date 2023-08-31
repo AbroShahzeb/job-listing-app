@@ -41,31 +41,31 @@ export default function Filters({
     setAreFiltersApplied(false);
   }
   return (
-    <div className="bg-mobile-bg bg-desaturated-dark-cyan  h-[156px] bg-no-repeat xs:bg-desktop-bg xs:bg-cover px-2 flex items-end">
+    <div className="flex h-[156px]  items-end bg-desaturated-dark-cyan bg-mobile-bg bg-no-repeat px-2 xs:bg-desktop-bg xs:bg-cover">
       <div
-        className={`text-lg p-3 bg-white  max-w-[18rem] xs:max-w-[22rem] mx-auto xs:container sm:max-w-[46rem] rounded-lg text-center shadow-lg translate-y-1/2  items-center justify-between gap-4 ${
+        className={`mx-auto max-w-[18rem] translate-y-1/2  items-center justify-between gap-4 rounded-lg bg-white p-3 text-center text-lg shadow-lg  xs:container xs:max-w-[22rem] sm:max-w-[46rem] ${
           areFiltersApplied ? "flex" : "hidden"
         }`}
       >
         {filters.map((filter) => {
           return (
-            <ul className="flex gap-2 flex-wrap" key={crypto.randomUUID()}>
-              <li className="flex justify-between text-sm items-center gap-2 bg-light-grayish-cyan-filter text-desaturated-dark-cyan font-bold leading-none">
+            <ul className="flex flex-wrap gap-2" key={crypto.randomUUID()}>
+              <li className="flex items-center justify-between gap-2 bg-light-grayish-cyan-filter text-sm font-bold leading-none text-desaturated-dark-cyan">
                 {filter.role && <p className="p-2">{filter.role}</p>}
                 {filter.role ? (
                   <span
-                    className="text-light-grayish-cyan-bg bg-desaturated-dark-cyan h-full text-3xl font-normal flex items-center justify-center w-6 leading-[0] pt-2 hover:bg-very-dark-grayish-cyan cursor-pointer"
+                    className="flex h-full w-6 cursor-pointer items-center justify-center bg-desaturated-dark-cyan pt-2 text-3xl font-normal leading-[0] text-light-grayish-cyan-bg hover:bg-very-dark-grayish-cyan"
                     onClick={() => removeFilterValue("role", null)}
                   >
                     &times;
                   </span>
                 ) : null}
               </li>
-              <li className="flex justify-between text-sm items-center gap-2 bg-light-grayish-cyan-filter text-desaturated-dark-cyan font-bold leading-none">
+              <li className="flex items-center justify-between gap-2 bg-light-grayish-cyan-filter text-sm font-bold leading-none text-desaturated-dark-cyan">
                 {filter.level && <p className="p-2">{filter.level}</p>}
                 {filter.level ? (
                   <span
-                    className="text-light-grayish-cyan-bg bg-desaturated-dark-cyan h-full text-3xl font-normal flex items-center justify-center w-6 leading-[0] pt-2 hover:bg-very-dark-grayish-cyan cursor-pointer"
+                    className="flex h-full w-6 cursor-pointer items-center justify-center bg-desaturated-dark-cyan pt-2 text-3xl font-normal leading-[0] text-light-grayish-cyan-bg hover:bg-very-dark-grayish-cyan"
                     onClick={() => removeFilterValue("level", null)}
                   >
                     &times;
@@ -76,12 +76,12 @@ export default function Filters({
                 return (
                   <li
                     key={crypto.randomUUID()}
-                    className="flex justify-between text-sm items-center gap-2 bg-light-grayish-cyan-filter text-desaturated-dark-cyan font-bold leading-none"
+                    className="flex items-center justify-between gap-2 bg-light-grayish-cyan-filter text-sm font-bold leading-none text-desaturated-dark-cyan"
                   >
                     <p className="p-2">{tool}</p>
                     {tool ? (
                       <span
-                        className="text-light-grayish-cyan-bg bg-desaturated-dark-cyan h-full text-3xl font-normal flex items-center justify-center w-6 leading-[0] pt-2 hover:bg-very-dark-grayish-cyan cursor-pointer"
+                        className="flex h-full w-6 cursor-pointer items-center justify-center bg-desaturated-dark-cyan pt-2 text-3xl font-normal leading-[0] text-light-grayish-cyan-bg hover:bg-very-dark-grayish-cyan"
                         onClick={() => removeFilterValue("tools", tool)}
                       >
                         &times;
@@ -94,12 +94,12 @@ export default function Filters({
                 return (
                   <li
                     key={crypto.randomUUID()}
-                    className="flex justify-between text-sm items-center gap-2 bg-light-grayish-cyan-filter text-desaturated-dark-cyan font-bold leading-none"
+                    className="flex items-center justify-between gap-2 bg-light-grayish-cyan-filter text-sm font-bold leading-none text-desaturated-dark-cyan"
                   >
                     <p className="p-2">{language}</p>
                     {language ? (
                       <span
-                        className="text-light-grayish-cyan-bg bg-desaturated-dark-cyan h-full text-3xl font-normal flex items-center justify-center w-6 leading-[0] pt-2 hover:bg-very-dark-grayish-cyan cursor-pointer"
+                        className="flex h-full w-6 cursor-pointer items-center justify-center bg-desaturated-dark-cyan pt-2 text-3xl font-normal leading-[0] text-light-grayish-cyan-bg hover:bg-very-dark-grayish-cyan"
                         onClick={() => removeFilterValue("languages", language)}
                       >
                         &times;
@@ -112,7 +112,7 @@ export default function Filters({
           );
         })}
         <button
-          className="text-md hover:cursor-pointer hover:text-desaturated-dark-cyan hover:underline text-sm font-bold text-very-dark-grayish-cyan "
+          className="text-md text-sm font-bold text-very-dark-grayish-cyan hover:cursor-pointer hover:text-desaturated-dark-cyan hover:underline "
           onClick={clearFilters}
         >
           Clear
