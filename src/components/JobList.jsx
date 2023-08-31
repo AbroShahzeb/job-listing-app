@@ -21,7 +21,7 @@ export default function JobList({
               setFilters={setFilters}
               setAreFiltersApplied={setAreFiltersApplied}
             />
-          )
+          ),
       )}
     </div>
   );

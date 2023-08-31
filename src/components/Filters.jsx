@@ -19,7 +19,7 @@ export default function Filters({
       // Remove the specific value from the array in the newFilters object
       if (Array.isArray(newFilters[0][filterType])) {
         newFilters[0][filterType] = newFilters[0][filterType].filter(
-          (item) => item !== value
+          (item) => item !== value,
         );
       } else {
         newFilters[0][filterType] = "";

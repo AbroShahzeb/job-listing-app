@@ -36,7 +36,7 @@ function App() {
     function () {
       applyFilters();
     },
-    [filters]
+    [filters],
   );
   return (
     <div className="w-full min-h-screen bg-light-grayish-cyan-bg">
