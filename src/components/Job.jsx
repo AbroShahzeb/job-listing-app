@@ -31,7 +31,7 @@ export default function Job({ job, setFilters, setAreFiltersApplied }) {
               )}
             </div>
             <div>
-              <h2 className="text-lg font-bold hover:cursor-pointer hover:text-desaturated-dark-cyan md:mt-2">
+              <h2 className="text-lg font-bold hover:cursor-pointer hover:text-desaturated-dark-cyan md:mt-2 text-very-dark-grayish-cyan">
                 {job?.position}
               </h2>
               <p className="text-md font-normal mb-3 text-dark-grayish-cyan">
