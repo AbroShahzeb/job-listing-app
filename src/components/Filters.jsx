@@ -7,6 +7,10 @@ export default function Filters({
   function removeFilterValue(filterType, value) {
     setFilters((prevFilters) => {
       const newFilters = [...prevFilters];
+<<<<<<< HEAD
+=======
+      
+>>>>>>> e48d858c58630480539a4af33a2e2ddb2b1d7cde
 
       // Remove the specific value from the array in the newFilters object
       if (Array.isArray(newFilters[0][filterType])) {
@@ -19,6 +23,15 @@ export default function Filters({
 
       return newFilters;
     });
+    if (
+        filters[0].role === "" &&
+        filters[0].level === "" &&
+        filters[0].languages.length === 0 &&
+        filters[0].tools.length === 0
+      ) {
+        setAreFiltersApplied(false);
+      }
+    
   }
 
   function clearFilters() {

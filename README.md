@@ -56,7 +56,7 @@ Below are the screenshots of app.
 
 This was an amazing exercise to test my data structures. I had to manipulate the filters array, which was quite complex (atleast I thought so) but I managed to do it.
 
-I am really proud of JavaScript function show below as it handled all the filtering work.
+I am really proud of JavaScript function shown below as it handled all the filtering work.
 
 ```js
 const applyFilters = () => {
