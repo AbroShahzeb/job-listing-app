@@ -35,6 +35,14 @@ function App() {
   useEffect(
     function () {
       applyFilters();
+      if (
+        filters[0].role === "" &&
+        filters[0].level === "" &&
+        filters[0].languages.length === 0 &&
+        filters[0].tools.length === 0
+      ) {
+        setAreFiltersApplied(false);
+      }
     },
     [filters],
   );
